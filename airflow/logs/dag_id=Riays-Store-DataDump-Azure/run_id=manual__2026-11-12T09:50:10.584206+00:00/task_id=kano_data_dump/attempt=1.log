@@ -1,0 +1,72 @@
+[2026-11-12T09:50:22.222+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-12T09:50:22.238+0000] {taskinstance.py:2632} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Riays-Store-DataDump-Azure.kano_data_dump manual__2026-11-12T09:50:10.584206+00:00 [queued]>
+[2026-11-12T09:50:22.243+0000] {taskinstance.py:2632} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Riays-Store-DataDump-Azure.kano_data_dump manual__2026-11-12T09:50:10.584206+00:00 [queued]>
+[2026-11-12T09:50:22.243+0000] {taskinstance.py:2885} INFO - Starting attempt 1 of 1
+[2026-11-12T09:50:22.257+0000] {taskinstance.py:2908} INFO - Executing <Task(PythonOperator): kano_data_dump> on 2026-11-12 09:50:10.584206+00:00
+[2026-11-12T09:50:22.263+0000] {standard_task_runner.py:72} INFO - Started process 46699 to run task
+[2026-11-12T09:50:22.269+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'Riays-Store-DataDump-Azure', 'kano_data_dump', 'manual__2026-11-12T09:50:10.584206+00:00', '--job-id', '70', '--raw', '--subdir', 'DAGS_FOLDER/for_azure.py', '--cfg-path', '/tmp/tmpgkkv2830']
+[2026-11-12T09:50:22.272+0000] {standard_task_runner.py:105} INFO - Job 70: Subtask kano_data_dump
+[2026-11-12T09:50:22.302+0000] {task_command.py:467} INFO - Running <TaskInstance: Riays-Store-DataDump-Azure.kano_data_dump manual__2026-11-12T09:50:10.584206+00:00 [running]> on host codespaces-487b3c
+[2026-11-12T09:50:22.355+0000] {taskinstance.py:3158} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Riays-Store-DataDump-Azure' AIRFLOW_CTX_TASK_ID='kano_data_dump' AIRFLOW_CTX_EXECUTION_DATE='2026-11-12T09:50:10.584206+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-11-12T09:50:10.584206+00:00'
+[2026-11-12T09:50:22.356+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-11-12T09:50:22.450+0000] {_universal.py:532} INFO - Request URL: 'https://login.microsoftonline.com/5c0f2e50-653b-41c2-b990-ff1194bdc43d/oauth2/v2.0/token'
+Request method: 'POST'
+Request headers:
+    'Content-Type': 'application/x-www-form-urlencoded'
+    'x-ms-client-request-id': '7a500d0a-de7e-11f1-bfac-70a8a574694d'
+    'User-Agent': 'azsdk-python-identity/1.27.0 Python/3.14.2 (Linux-6.8.0-1070-azure-x86_64-with-glibc2.39)'
+A body is sent with the request
+[2026-11-12T09:50:22.622+0000] {_universal.py:581} INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Content-Type': 'application/json; charset=utf-8'
+    'Expires': '-1'
+    'Strict-Transport-Security': 'REDACTED'
+    'X-Content-Type-Options': 'REDACTED'
+    'x-ms-clientdata': 'REDACTED'
+    'P3P': 'REDACTED'
+    'x-ms-request-id': 'd0459f4c-1165-4675-9e35-9aafc4a00200'
+    'x-ms-ests-server': 'REDACTED'
+    'x-ms-srs': 'REDACTED'
+    'Content-Security-Policy-Report-Only': 'REDACTED'
+    'X-XSS-Protection': 'REDACTED'
+    'Set-Cookie': 'REDACTED'
+    'Date': 'Thu, 12 Nov 2026 09:50:22 GMT'
+    'Content-Length': '1985'
+[2026-11-12T09:50:22.623+0000] {get_token_mixin.py:139} INFO - ClientSecretCredential.get_token_info succeeded
+[2026-11-12T09:50:22.623+0000] {_universal.py:532} INFO - Request URL: 'https://riaysazure.blob.core.windows.net/https//raw-data%40riaysazure.blob.core.windows.net/raw-data/kano/sales_2026_11_12.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '58075'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'adlfs/2026.8.0 azsdk-python-storage-blob/12.31.1 Python/3.14.2 (Linux-6.8.0-1070-azure-x86_64-with-glibc2.39)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '7a4ffe0a-de7e-11f1-bfac-70a8a574694d'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2026-11-12T09:50:23.181+0000] {_universal.py:581} INFO - Response status: 404
+Response headers:
+    'Content-Length': '225'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '102780a6-c01e-006d-6e8b-7217ab000000'
+    'x-ms-client-request-id': '7a4ffe0a-de7e-11f1-bfac-70a8a574694d'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'ContainerNotFound'
+    'Date': 'Thu, 12 Nov 2026 09:50:22 GMT'
+[2026-11-12T09:50:23.184+0000] {logging_mixin.py:190} INFO - ❌ An error occured: Failed to upload block: The specified container does not exist.
+RequestId:102780a6-c01e-006d-6e8b-7217ab000000
+Time:2026-11-12T09:50:23.1413997Z
+ErrorCode:ContainerNotFound
+Content: <?xml version="1.0" encoding="utf-8"?><Error><Code>ContainerNotFound</Code><Message>The specified container does not exist.
+RequestId:102780a6-c01e-006d-6e8b-7217ab000000
+Time:2026-11-12T09:50:23.1413997Z</Message></Error>!
+[2026-11-12T09:50:23.184+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-11-12T09:50:23.189+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-11-12T09:50:23.189+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=Riays-Store-DataDump-Azure, task_id=kano_data_dump, run_id=manual__2026-11-12T09:50:10.584206+00:00, execution_date=20261112T095010, start_date=20261112T095022, end_date=20261112T095023
+[2026-11-12T09:50:23.214+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-12T09:50:23.234+0000] {taskinstance.py:3925} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-11-12T09:50:23.240+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

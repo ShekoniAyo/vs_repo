@@ -1,0 +1,21 @@
+[2026-11-12T08:39:48.835+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-11-12T08:39:48.853+0000] {taskinstance.py:2632} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Riays-Store-DataDump.abuja_data_dump scheduled__2026-11-11T06:00:00+00:00 [queued]>
+[2026-11-12T08:39:48.892+0000] {taskinstance.py:2632} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Riays-Store-DataDump.abuja_data_dump scheduled__2026-11-11T06:00:00+00:00 [queued]>
+[2026-11-12T08:39:48.892+0000] {taskinstance.py:2885} INFO - Starting attempt 1 of 1
+[2026-11-12T08:39:48.905+0000] {taskinstance.py:2908} INFO - Executing <Task(PythonOperator): abuja_data_dump> on 2026-11-11 06:00:00+00:00
+[2026-11-12T08:39:48.910+0000] {standard_task_runner.py:72} INFO - Started process 3351 to run task
+[2026-11-12T08:39:48.916+0000] {standard_task_runner.py:104} INFO - Running: ['airflow', 'tasks', 'run', 'Riays-Store-DataDump', 'abuja_data_dump', 'scheduled__2026-11-11T06:00:00+00:00', '--job-id', '30', '--raw', '--subdir', 'DAGS_FOLDER/for_databricks.py', '--cfg-path', '/tmp/tmp462zm97c']
+[2026-11-12T08:39:48.918+0000] {standard_task_runner.py:105} INFO - Job 30: Subtask abuja_data_dump
+[2026-11-12T08:39:48.950+0000] {task_command.py:467} INFO - Running <TaskInstance: Riays-Store-DataDump.abuja_data_dump scheduled__2026-11-11T06:00:00+00:00 [running]> on host codespaces-487b3c
+[2026-11-12T08:39:48.994+0000] {taskinstance.py:3158} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Riays-Store-DataDump' AIRFLOW_CTX_TASK_ID='abuja_data_dump' AIRFLOW_CTX_EXECUTION_DATE='2026-11-11T06:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-11-11T06:00:00+00:00'
+[2026-11-12T08:39:48.996+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-11-12T08:39:49.048+0000] {base.py:84} INFO - Retrieving connection 'for_databricks'
+[2026-11-12T08:39:49.049+0000] {connection_wrapper.py:331} INFO - AWS Connection (conn_id='for_databricks', conn_type='aws') credentials retrieved from login and password.
+[2026-11-12T08:39:49.783+0000] {logging_mixin.py:190} INFO - Generation complete for 5! No. of Records: 1000.
+[2026-11-12T08:39:49.784+0000] {logging_mixin.py:190} INFO - ✅ Data dump for Store 5 completed successfully!!!
+[2026-11-12T08:39:49.784+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-11-12T08:39:49.790+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-11-12T08:39:49.790+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=Riays-Store-DataDump, task_id=abuja_data_dump, run_id=scheduled__2026-11-11T06:00:00+00:00, execution_date=20261111T060000, start_date=20261112T083948, end_date=20261112T083949
+[2026-11-12T08:39:49.815+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-11-12T08:39:49.823+0000] {taskinstance.py:3925} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-11-12T08:39:49.824+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

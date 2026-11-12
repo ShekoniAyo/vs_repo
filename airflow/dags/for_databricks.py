@@ -115,7 +115,7 @@ def generate_order_logs(istore, ds=None, no_of_records: int = 1000, error_rate: 
 
 
 
-with DAG (dag_id="Riays-Store-DataDump", start_date=datetime(2026, 8, 31), schedule='0 6 * * *', \
+with DAG (dag_id="Riays-Store-DataDump-S3", start_date=datetime(2026, 8, 31), schedule='0 6 * * *', \
           catchup=False, description="Loading Daily Sales Data into S3", tags=['source', 'aws']) as dag:
 
           lagos_data_dump = PythonOperator(
